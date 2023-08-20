@@ -25,8 +25,8 @@ class UserLoginServiceImpl implements UserLoginService {
 
         return Success(nil);
 
-      case Failure(:final exeption):
-        return switch (exeption) {
+      case Failure(:final exception):
+        return switch (exception) {
           AuthError() =>
             Failure(ServiceException(message: 'Erro ao realizar login')),
           AuthunauthorizedException() =>
