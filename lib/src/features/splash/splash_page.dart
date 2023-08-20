@@ -1,4 +1,3 @@
-import 'package:asyncstate/asyncstate.dart';
 import 'package:dw_barbershop_app/src/features/auth/login/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +62,7 @@ class _SplashPageState extends State<SplashPage> {
             child: AnimatedContainer(
               width: _logoAnimationWidth,
               height: _logoAnimationHeight,
-              duration: const Duration(seconds: 3),
+              duration: const Duration(seconds: 1),
               curve: Curves.linearToEaseOut,
               child: Image.asset(
                 'assets/images/imgLogo.png',
