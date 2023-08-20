@@ -31,5 +31,6 @@ sealed class BarbershopTheme {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
     ),
+    fontFamily: FontConstants.fontFamily,
   );
 }
