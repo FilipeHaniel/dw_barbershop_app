@@ -1,3 +1,4 @@
+import 'package:asyncstate/asyncstate.dart';
 import 'package:dw_barbershop_app/src/core/exceptions/service_exception.dart';
 import 'package:dw_barbershop_app/src/core/funcional_programming/either.dart';
 import 'package:dw_barbershop_app/src/core/providers/application_providers.dart';
@@ -12,6 +13,8 @@ class LoginVm extends _$LoginVm {
   LoginState build() => LoginState.initial();
 
   Future<void> login(String email, String password) async {
+    final loaderHandle = AsyncLoaderHandler()..start();
+
     final loginService = ref.watch(userLoginServiceProvider);
 
     final result = await loginService.execute(email, password);
@@ -29,5 +32,7 @@ class LoginVm extends _$LoginVm {
           errorMessage: () => message,
         );
     }
+
+    loaderHandle.close();
   }
 }

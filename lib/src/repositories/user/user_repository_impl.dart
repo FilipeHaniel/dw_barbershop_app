@@ -17,6 +17,7 @@ class UserRepositoryImpl implements UserRepository {
   Future<Either<AuthException, String>> login(
       String email, String password) async {
     try {
+      /// [inAuth] por ser uma requisição não autenticada
       final Response(:data) = await _restClient.unAuth.post('/auth', data: {
         'email': email,
         'password': password,
