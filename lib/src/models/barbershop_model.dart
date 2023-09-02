@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class BarbershopModel {
   final int id;
   final String name;

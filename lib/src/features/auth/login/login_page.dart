@@ -127,7 +127,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                             child: const Text('ACESSAR'),
                             onPressed: () {
                               switch (_formKey.currentState!.validate()) {
-                                case (false || null):
+                                case (false):
                                   Messages.showError(
                                       context, 'Campos inválidos');
                                 case true:
